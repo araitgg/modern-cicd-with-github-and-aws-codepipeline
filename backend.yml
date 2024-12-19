@@ -91,7 +91,7 @@ Resources:
   AppRunnerService:
     Type: AWS::AppRunner::Service
     Properties:
-      ServiceName: !Sub "Hotel-${AWS::StackName}-${AWS::Region}"
+      ServiceName: !Sub "H-${AWS::StackName}-${AWS::Region}"
       SourceConfiguration:
         AutoDeploymentsEnabled: false
         ImageRepository:
