@@ -34,7 +34,7 @@ Resources:
   AppRunnerInstanceRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !Sub "AppRunnerHotelAppRole-${AWS::StackName}-${AWS::Region}"
+      RoleName: !Sub "AppRunner-${AWS::StackName}-${AWS::Region}"
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
         Statement:
@@ -76,7 +76,7 @@ Resources:
   AppRunnerECRAccessRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !Sub "AppHotelAECRAccess-${AWS::StackName}-${AWS::Region}"
+      RoleName: !Sub "ECR-${AWS::StackName}-${AWS::Region}"
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
         Statement:
@@ -93,7 +93,7 @@ Resources:
   DynamoDBReadCapacityAlarm:
     Type: "AWS::CloudWatch::Alarm"
     Properties:
-      AlarmName: !Sub "HighReadCapacityAlarm-${AWS::StackName}-${AWS::Region}"
+      AlarmName: !Sub "Alarm-${AWS::StackName}-${AWS::Region}"
       AlarmDescription: "Alarm if DynamoDB read capacity exceeds 80% of provisioned units"
       Namespace: "AWS/DynamoDB"
       MetricName: "ConsumedReadCapacityUnits"
