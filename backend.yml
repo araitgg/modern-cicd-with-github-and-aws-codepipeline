@@ -76,7 +76,7 @@ Resources:
   AppRunnerECRAccessRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !Sub "AppRunnerHotelAppECRAccessRole-${AWS::StackName}-${AWS::Region}"
+      RoleName: !Sub "AppHotelAECRAccess-${AWS::StackName}-${AWS::Region}"
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
         Statement:
